@@ -3,8 +3,7 @@
 # Table of Contents 
 [Front-end](#Front-end)   
 [Activity-Diagrams](#Activity-Diagrams)  
-[Sign-Up](##Sign-Up)   
-[Log-In](#Log-In)   
+
 
 
 
@@ -43,6 +42,8 @@
 ### Log In
 ![LogInActivityDiagarm](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/bf7f9e80-b520-4d91-9a3e-0157366abefa)
 
+## Users Table
+I built my table in the database using **migration** of Laravel. see it in the "migration" file
 
 ## Sign Up
 ## Email Verification
