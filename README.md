@@ -6,7 +6,7 @@
 
 
 
-
+## Front-end
 ![00](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/eed69399-c837-4f5f-a56e-a131d14b8053)
 ![01](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/3b75795a-0164-4613-8c84-07586ec988ea)
 
@@ -27,7 +27,6 @@
 ![4](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/8bfdcaf8-9858-4fc5-b490-fbe92ef01de1)
 
 • Background using **CSS**.
-### Front-end
 
 • "Resend" button is available only one-time for press, so that user don't press the button many times for fun, making load to my server. I did this through "onclick" attribute of **JavaScript**.
 
