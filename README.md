@@ -43,7 +43,7 @@
 
 
 <a name="Front-end"/>
-## Front-end
+
 ## Sign Up
 ## Email Verification
 ## Log In
