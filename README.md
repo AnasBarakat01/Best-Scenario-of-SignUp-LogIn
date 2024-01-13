@@ -2,8 +2,8 @@
 # Description : ...........
 # Table of Contents 
 [Front-end](#Front-end)   
-[Activity_Diagrams](#Activity_Diagrams) 
-[Sign_Up](### Sign_Up) 
+[Activity-Diagrams](#Activity-Diagrams) 
+[Sign_Up](###Sign_Up) 
 
 
 
