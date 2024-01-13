@@ -3,7 +3,7 @@
 # Table of Contents 
 [Front-end](#Front-end)   
 [Activity-Diagrams](#Activity-Diagrams) 
-[Sign_Up](###Sign_Up) 
+[Sign-Up](###Sign-Up) 
 
 
 
