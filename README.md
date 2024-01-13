@@ -42,7 +42,6 @@
 ![LogInActivityDiagarm](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/bf7f9e80-b520-4d91-9a3e-0157366abefa)
 
 
-## Front-end
 
 ## Sign Up
 ## Email Verification
