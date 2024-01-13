@@ -2,7 +2,7 @@
 # Description : ...........
 # Table of Contents 
 [Front-end](#Front-end)   
-[Activity-Diagrams](#Activity-Diagrams) 
+[Activity_Diagrams](#Activity_Diagrams) 
 [Sign-Up](#Sign-Up) 
 
 
