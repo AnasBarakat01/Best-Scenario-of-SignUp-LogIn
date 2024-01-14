@@ -54,6 +54,27 @@ b) "activation_code" : here I put the activation code we created for this user, 
 c) "activation_expiry" : the activation code is valid only for one day.   
 
 
-## Sign Up
+## Sign Up Contoller
+- I made a **controller** of Laravel to recieve requests from user and deal with it. to create the controller use the following  command : `php artisan make:controller SignUpController`   
+- a sign up page is displayed with a button navigating to the log in page if user already have account.
+- I used the **validate** function of Laravel to validate the input data.
+  - I handle the "birth date" field, so that user don't enter a date after or equal today. this is done using **DateTime** class of         Laravel.
+  - what about "password" field ?
+    - "password" must have uppercase characters, lowercase characters, numbers and specail characters. I used **Regex** of PHP for this process as following :         
+ `'regex:/(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#@\-!%\$\*\&])/'`
+    - "password_confirmation field making the user reenter password.
+    - hasing password for security using **Hash** facade of Laravel.    
+- In case of validation has failed, I redirect the user to the sign up page with the data he has entered. by storing these data in the **session** of Laravel. in addition to this a list of error messages is diplayed to the user.
+- User can upload his profile picture, I save it in my website to display it later for the user. as following :
+  - picture name consists of the **time** where the picture has been uploaded ,and **extension** of it.   `$imageName = time().'.'.$req->profilePhoto->extension();`
+  - store the picture in the public path '/images' of Laravel using **move()** function.                
+ `$req->profilePhoto->move(public_path('images'), $imageName);`
+- Generate the activation code using **random_bytes()** function to generate random numbers. then I used **bin2hex()** function to convert the code to "hexadecimal", so that I have characters in addition to numbers in my code.
+- For more security the activation code is valid only for one day. I used **time()** function, which returns the current time by seconds. then adding to it one day by seconds which is "1*24*60*60". after that converting this date to "Y-m-d H:i:s"  format of **DateTime** class using the **date()** function of Laravel. `date( 'Y-m-d H:i:s',  time() + 1*24*60*60 )`
+- Store user data and activation data in the database through the **Model** of Laravel. model name is "User".   
+- Generate the activation link (which will be sent to user) consisting of website URL, user email and activation code. something like that `http://localhost:8000/signup/anas.barakat.1434@gmail.com/85d4eb341d83fa8eca73752eb976fb83` its route is `/signup/{email}/{actvitationCode}`.  as you can see I used **route parameters**, so that when user clicks the activation link I access values of email and activation code through these route parameters.
+
+
+## Sending Mali 
 ## Email Verification
 ## Log In
