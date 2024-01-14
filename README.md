@@ -49,13 +49,10 @@ Use the foolowing command to create the migration `php artisan make:migration cr
 ![table](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/3d82d8cb-6b91-4eea-a9a2-ee71db878cf4)    
 
 I wanna discuss 3 columns in this table.  
-a) "verified" : "0" -> meaning this account is not verified yet (default value). "1" -> this account is verified.
-
-b) activation_code.
-
-c) activation_expiry : the activation_code is valid only for one day.
-
-                                        Third step : validation
+a) "activated" : "0" -> meaning this account is not activated yet (default value). "1" -> this account is activated.  
+b) "activation_code" : here we put the activation code we created for this user, so that when user press the activation link we 
+                          compare the activation code stored in the database with the one came from user.  
+c) "activation_expiry" : the activation code is valid only for one day.   
 
 
 ## Sign Up
