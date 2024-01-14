@@ -27,8 +27,6 @@ return new class extends Migration
             $table->integer('activated')->defalt(0);
             $table->string('activation_code',2048);
             $table->date('activation_expiry')->nullable();
-            $table->date('activated_at')->nullable();
-
         });
     }
 
