@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('phone');
             $table->integer('my_balance')->defalt(0);
+            $table->integer('activated')->defalt(0);
             $table->string('activation_code',2048);
             $table->date('activation_expiry')->nullable();
             $table->date('activated_at')->nullable();
