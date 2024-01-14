@@ -43,7 +43,20 @@
 ![LogInActivityDiagarm](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/bf7f9e80-b520-4d91-9a3e-0157366abefa)
 
 ## Users Table
-I built my table in the database using **migration** of Laravel. see it in the "migration" file
+I built my table in the database using **migration** of Laravel.    
+Use the foolowing command to create the migration `php artisan make:migration create_users_table --create="users"` then `php artisan migrate`   
+
+![table](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/3d82d8cb-6b91-4eea-a9a2-ee71db878cf4)    
+
+I wanna discuss 3 columns in this table.  
+a) "verified" : "0" -> meaning this account is not verified yet (default value). "1" -> this account is verified.
+
+b) activation_code.
+
+c) activation_expiry : the activation_code is valid only for one day.
+
+                                        Third step : validation
+
 
 ## Sign Up
 ## Email Verification
