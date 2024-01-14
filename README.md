@@ -44,14 +44,13 @@
 
 ## Users Table
 I built my table in the database using **migration** of Laravel.    
-Use the foolowing command to create the migration `php artisan make:migration create_users_table --create="users"` then `php artisan migrate`   
+Use the foolowing command to create the migration `php artisan make:migration create_users_table --create="users"`  then `php artisan migrate`   
 
-![table](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/3d82d8cb-6b91-4eea-a9a2-ee71db878cf4)    
+![table](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/2fa84eb0-08c5-40c1-a6fc-39c09468ad19)
 
 I wanna discuss 3 columns in this table.  
 a) "activated" : "0" -> meaning this account is not activated yet (default value). "1" -> this account is activated.  
-b) "activation_code" : here we put the activation code we created for this user, so that when user press the activation link we 
-                          compare the activation code stored in the database with the one came from user.  
+b) "activation_code" : here I put the activation code we created for this user, so that when user press the activation link I compare the activation code stored in the database with the one came from user.  
 c) "activation_expiry" : the activation code is valid only for one day.   
 
 
