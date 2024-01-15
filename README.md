@@ -75,7 +75,7 @@ c) "activation_expiry" : the activation code is valid only for one day.
 - Generate the activation link (which will be sent to user) consisting of website URL, user email and activation code. something like that `http://localhost:8000/signup/anas.barakat.1434@gmail.com/85d4eb341d83fa8eca73752eb976fb83` its route is `/signup/{email}/{actvitationCode}`.  as you can see I used **route parameters**, so that when user clicks the activation link I access values of email and activation code through these route parameters.
 
 
-## Sending Mali 
+## Sending The Activation Link 
 
 - I uesd **SMTP** protocol to send email to user.
 - I also used **sendmail server** from Google to send emails. here are steps to connfig your google account for sending mails :
@@ -98,7 +98,11 @@ c) "activation_expiry" : the activation code is valid only for one day.
        - **content()**, where I determine the view file (of '.blade.php' extension), that will be sent to the user. I can design it as I want using HTML, CSS, JavaScript, ...
 
      
+## User Activate His Account
 
+- After user has signed up and I sent the activation link to his mail, I should tell him to press the activation link on his mail to activate his account.
+- I had explained design of this screen above. name of this file is "tellingUser.blade.php".
+- 
 
 
 
