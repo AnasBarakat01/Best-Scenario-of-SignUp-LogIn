@@ -109,6 +109,17 @@ c) "activation_expiry" : the activation code is valid only for one day.
   `Route::get('resendVerificationEmail/{email}/{ActvitationCode}'
         ,'App\Http\Controllers\ShowingController@resendVerificationEmail');`    
   I put constrain on this button as I explained in the "front-end" section, which is making it available only one-time for clicking (using JavaScript). So that I ensures user doesn't clcik it many times for fun and making load to my server.
+
+
+  ## Check The Activation
+  As I explaiend before I recieve 'email' and 'activation code' of user through the route parameters in the activation link. then I compare them with the values in the database.
+  - If I didn't found the email address in the database, I redirect user to the sign up page telling him "Create a new acoount as yours doesn\'t exist anymore".
+  - If the activation code is expired, I delete his account from my database telling him "Your activation link is expired ! Sign up again".
+  - If the activation code doesn't match mine in the database, I delete his account telling him "Your activation link is invalid ! Sign up again".
+  - Otherwise, the activation link is valid, as the activation code matches mine in the database and it's not expired. so I redirect him to the "Log In" page.
+
+Why I do redirect user to the "Log In" page after he finished Signing Up ?   
+User enter email and password while they are fresh in his mind. then browser save them for further login.
   
   
 
