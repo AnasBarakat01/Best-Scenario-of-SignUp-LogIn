@@ -67,8 +67,8 @@ class SignUPController extends Controller
 
         //                              PART 4
         // create the ectiviation link
-        $activitaionLink = $req->url()."/".$req->email."/".$activationCode;
-        Mail::to($req->email)->send(new ActivitationMail($activitaionLink));
+        $ActivationLink = $req->url()."/".$req->email."/".$activationCode;
+        Mail::to($req->email)->send(new ActivitationMail($ActivationLink));
         // Tell user we have sent a message to his email address. open it
         // verify your account 
         return view('verifyEmail',
@@ -83,14 +83,14 @@ class SignUPController extends Controller
 
 public function resendVerificationEmail($email, $activationCode)
     {
-        $activitaionLink = 'http://'.$_SERVER['HTTP_HOST'].'/'.'signup/'.$email.'/'.$activationCode;
-        Mail::to($email)->send(new ActivitationMail($activitaionLink));
+        $ActivationLink = 'http://'.$_SERVER['HTTP_HOST'].'/'.'signup/'.$email.'/'.$activationCode;
+        Mail::to($email)->send(new ActivitationMail($ActivationLink));
         return view('verifyEmail',
                 ['email'=> $email, 'activationCode'=>$activationCode]);
     }                          
 
 
-    public function checkActivitaion($email, $userActvitationCode)
+    public function checkActivation($email, $userActvitationCode)
     {
         // if this account doesn't exist
         if( ! User::where('email',$email)->first() )
@@ -122,7 +122,7 @@ public function resendVerificationEmail($email, $activationCode)
         $currentDate = new DateTime();
         $currentDate = $currentDate->format('Y-m-d');
 
-        // check the activitaion values
+        // check the Activation values
         if ($correctactivationCode == $userActvitationCode &&
              ($currentDate == $activationCodeExpiration || $currentDate == $sub2))   
         {
@@ -147,9 +147,6 @@ public function resendVerificationEmail($email, $activationCode)
         }
     }
     
-
-
-
 }
 
 ?>
