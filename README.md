@@ -119,7 +119,11 @@ c) "activation_expiry" : the activation code is valid only for one day.
   - Otherwise, the activation link is valid, as the activation code matches mine in the database and it's not expired. so I redirect him to the "Log In" page.
 
 Why I do redirect user to the "Log In" page after he finished Signing Up ?   
-User enter email and password while they are fresh in his mind. then browser save them for further login.
+User enter email and password while they are fresh in his mind. then browser save them for further login.   
+
+## Log In
+
+
   
   
 
