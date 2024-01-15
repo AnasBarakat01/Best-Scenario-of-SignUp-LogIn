@@ -86,7 +86,18 @@ c) "activation_expiry" : the activation code is valid only for one day.
    5. Give name for your application then copy the given password, which consists of 16 digit
    6. Configure your website. go to **".env"** file and edit the following variables :  `MAIL_DRIVER=sendmail` `MAIL_HOST=smtp.gmail.com`    `MAIL_PORT=587`    `MAIL_USERNAME=..your gamil account..`     `MAIL_PASSWORD=..given password..`   `MAIL_ENCRYPTION=tls`
 
- - Sending email in Laravel is done using the **Mail** class 
+ - Sending email in Laravel is done using the **Mail** class     
+    `Mail::to('$req->email')->send(new ActivationMail($activationLink) )`
+ - What is "ActivationMail" ?
+    - Its the **Mailable Class** ,provided from Laravel, which represents the message sent to the user mail.
+    - To create it use the following command  `php artisan make:mail ActivationMail`
+    - I pass "$activationLink" variable to the object of Mailable class through its constructor    
+      `new ActivationMail($activationLink)`
+    - "ActivationMail" has 2 important dunctions :
+       - **envelope()**, where I determine the subject of the message
+       - **content()**, where I determine the view file (of '.blade.php' extension), that will be sent to the user. I can design it as I want using HTML, CSS, JavaScript, ...
+
+     
 
 
 
