@@ -2,7 +2,13 @@
 # Description : ...........
 # Table of Contents 
 [Front-end](#Front-end)   
-[Activity-Diagrams](#Activity-Diagrams)  
+[Activity-Diagrams](#Activity-Diagrams)
+[Users-Table](#Users-Table)
+[Sign-Up-Contoller](#Sign-Up-Contoller)
+[Sending-The-Activation-Link](#Sending-The-Activation-Link)
+[User-Activate-His-Account](#User-Activate-His-Account
+[Check-Activation](#Check-Activation
+[Log-In](#Log-In)
 
 
 
@@ -11,26 +17,18 @@
 ![00](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/eed69399-c837-4f5f-a56e-a131d14b8053)
 ![01](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/3b75795a-0164-4613-8c84-07586ec988ea)
 
-• Putting HTML elements beside each others through **CSS**.
+- Putting HTML elements beside each others through **CSS**.
+- I used "bootstrap 5" library of  **CSS** to display list of errors provided to user when entered data is invalid.
+- I used **JavaScript** to preview choosen image from user (before submit).
+- Prevent frequent submissions of the form through disabling the submit button after one click through **JavaScript**.
+- The “address” filed consists of 2 select elements. their values are connected to each other using **JavaScript**.
+- for example, when user choose "Cairo" in the first field the following cities are displayed "Nase City","6th October", "Mariotia" and "Ramsis" in the second field.
+- I made 2 fields for password to ensure that user entered it correctly.
+  
+![4](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/8bfdcaf8-9858-4fc5-b490-fbe92ef01de1)    
 
-• I used "bootstrap 5" library of  **CSS** to display list of errors provided to user when entered data is invalid.
-
-• I used **JavaScript** to preview choosen image from user (before submit).
-
-• Prevent frequent submissions of the form through disabling the submit button after one click through **JavaScript**.
-
-• The “address” filed consists of 2 select elements. their values are connected to each other using **JavaScript**.
-  for example, when user choose "Cairo" in the first field the following cities are displayed "Nase City","6th October",
-  "Mariotia" and "Ramsis" in the second field.
-
-• I made 2 fields for password to ensure that user entered it correctly.
-
-![4](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/8bfdcaf8-9858-4fc5-b490-fbe92ef01de1)
-
-• Background using **CSS**.
-
-• "Resend" button is available only one-time for press, so that user don't press the button many times for fun, making load to my server. I did this through "onclick" attribute of **JavaScript**.
-
+- Background using **CSS**.
+- "Resend" button is available only one-time for press, so that user don't press the button many times for fun, making load to my server. I did this through "onclick" attribute of **JavaScript**.    
 
 ![04](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/e058d2ff-583b-4097-83f6-6b340de31dd9)
 ![03](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/89b336dd-5682-4505-b8fd-abeaf01368b8)
@@ -111,7 +109,7 @@ c) "activation_expiry" : the activation code is valid only for one day.
   I put constrain on this button as I explained in the "front-end" section, which is making it available only one-time for clicking (using JavaScript). So that I ensures user doesn't clcik it many times for fun and making load to my server.
 
 
-  ## Check The Activation
+## Check Activation
   As I explaiend before I recieve 'email' and 'activation code' of user through the route parameters in the activation link. then I compare them with the values in the database.
   - If I didn't found the email address in the database, I redirect user to the sign up page telling him "Create a new acoount as yours doesn\'t exist anymore".
   - If the activation code is expired, I delete his account from my database telling him "Your activation link is expired ! Sign up again".
@@ -122,7 +120,12 @@ Why I do redirect user to the "Log In" page after he finished Signing Up ?
 User enter email and password while they are fresh in his mind. then browser save them for further login.   
 
 ## Log In
-
+- The function responsible for log in  is located in the "SignUpContoller" as name of "postLogInPage()".
+- User enter his email address and password. then I compare them with the values stored in the database.
+- If user account is not activated, I redirect him to the "Log In" page telling him
+  "Your account in not activated ! Press the activation link sent to your mail" .
+- I am using **Hash::check()** of Laravel to copmare the two hashed passwords, the first one stored in the database and the second one user enetering in the log in form.
+- If the log in is valid, I redirect the user to "home" page.
 
   
   
