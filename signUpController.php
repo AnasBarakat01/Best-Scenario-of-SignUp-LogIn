@@ -149,4 +149,27 @@ public function resendVerificationEmail($email, $activationCode)
     
 }
 
+
+public function postLogInPage(Request $req)
+    {
+        foreach( User::all() as  $account)
+        {
+            if($req->email == $account->email)
+                if($account->activated)
+                    if(Hash::check( $req->password,$account->password))
+                    {
+                        session(['loggedIn'=> true]);
+                        return redirect('/');
+                    }
+                    else 
+                        return redirect('/login')->withInput()
+                               ->with(['message1'=> "Incorrect password"]);
+                else
+                    return redirect('/login')->withInput()
+                           ->with(['message1'=> "Your account in not activated !",
+                                   'message2'=> "Press the activation link sent to your mail"]);
+        }
+        return redirect('/login')->with(['message1' => "No account found !",
+                                         'message2'=>"Create a new one if you don't have"]);
+    }
 ?>
