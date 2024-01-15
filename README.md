@@ -100,9 +100,17 @@ c) "activation_expiry" : the activation code is valid only for one day.
      
 ## User Activate His Account
 
-- After user has signed up and I sent the activation link to his mail, I should tell him to press the activation link on his mail to activate his account.
-- I had explained design of this screen above. name of this file is "tellingUser.blade.php".
-- 
+- After user has signed up and I sent the activation link to his mail, I am telling him to press the activation link on his mail to activate his account.
+- I had explained design of this page above. name of this file is "tellingUser.blade.php".
+- In case of user didn't recieve message on his mail, he could click the "Resend" button. then I resend the message to his mail.    
+  I put in this button user email and his activation code ,as route parameters, so that I recieve values of them when he clicks the button, to put them in the activation link that will be resend.   
+  A function called "resendVerificationEmail()" will be executed when clicking this button. this function exists in the "SignUpController".   
+  Its route is
+  `Route::get('resendVerificationEmail/{email}/{ActvitationCode}'
+        ,'App\Http\Controllers\ShowingController@resendVerificationEmail');`    
+  I put constrain on this button as I explained in the "front-end" section, which is making it available only one-time for clicking (using JavaScript). So that I ensures user doesn't clcik it many times for fun and making load to my server.
+  
+  
 
 
 
