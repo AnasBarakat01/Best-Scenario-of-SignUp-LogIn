@@ -2,12 +2,12 @@
 # Description : ...........
 # Table of Contents 
 [Front-end](#Front-end)   
-[Activity-Diagrams](#Activity-Diagrams)
-[Users-Table](#Users-Table)
-[Sign-Up-Contoller](#Sign-Up-Contoller)
-[Sending-The-Activation-Link](#Sending-The-Activation-Link)
-[User-Activate-His-Account](#User-Activate-His-Account
-[Check-Activation](#Check-Activation
+[Activity-Diagrams](#Activity-Diagrams)    
+[Users-Table](#Users-Table)    
+[Sign-Up-Contoller](#Sign-Up-Contoller)    
+[Sending-The-Activation-Link](#Sending-The-Activation-Link)    
+[User-Activate-His-Account](#User-Activate-His-Account)    
+[Check-Activation](#Check-Activation)    
 [Log-In](#Log-In)
 
 
