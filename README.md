@@ -94,6 +94,7 @@ c) "activation_expiry" : the activation code is valid only for one day.
     - "ActivationMail" has 2 important dunctions :
        - **envelope()**, where I determine the subject of the message
        - **content()**, where I determine the view file (of '.blade.php' extension), that will be sent to the user. I can design it as I want using HTML, CSS, JavaScript, ...
+         In my case the view file that will be sent is the "message.blade.php" file.
 
      
 ## User Activate His Account
