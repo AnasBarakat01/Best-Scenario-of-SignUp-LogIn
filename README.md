@@ -83,8 +83,8 @@ c) "activation_expiry" : the activation code is valid only for one day.
 
 - I uesd **SMTP** protocol to send email to user.
 - I also used **sendmail server** from Google to send emails. here are steps to connfig your google account for sending mails :
-   [^1]: Go to your Google account.
-   [^2]: Security.
+   1. Go to your Google account.
+   2.  Security.
    3. 2-step verification
    4. App passwords
    5. Give name for your application then copy the given password, which consists of 16 digit
@@ -134,19 +134,9 @@ User enter email and password while they are fresh in his mind. then browser sav
 - I am using **Hash::check()** of Laravel to copmare the two hashed passwords, the first one stored in the database and the second one user enetering in the log in form.
 - If the log in is valid, I redirect the user to "home" page.
 
-  
-  
 
-
-
-
-
-
-
-
-
-
-
-
-## Email Verification
-## Log In
+  <ol>
+  <li>Bird</li>
+  <li>McHale</li>
+  <li>Parish</li>
+  </ol>
