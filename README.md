@@ -4,7 +4,7 @@
   How to validate the data user has entered in the sign up process ? How can you guarantee that email-address user has entered while creating a new account is his own and this email is real (Email Verification) ? As you will see email Verification can done by several methods. I'm using the method of "Activation Link" sent to user mail.    
   I also use Activity Diagrams to provide you with a full imagination of the Sign up and Login scenario.
   What edits should be made to my database for the Email Verification process ?    
-  Actually I'm a web developer not designer, so my design of web-pages is not so good.I use PHP and Laravel framework.
+  Actually I'm a web developer not designer, so my design of web pages is not so good.I use PHP and Laravel framework.
   
 # Table of Contents 
 [Front-end](#Front-end)   
@@ -54,7 +54,7 @@ Use the foolowing command to create the migration `php artisan make:migration cr
 
 I wanna discuss 3 columns in this table.  
 a) "activated" : "0" -> meaning this account is not activated yet (default value). "1" -> this account is activated.  
-b) "activation_code" : here I put the activation code we created for this user, so that when user press the activation link I compare the activation code stored in the database with the one came from user.  
+b) "activation_code" : here I put the activation code created for this user, so that when user press the activation link I compare the activation code stored in the database with the one came from user.  
 c) "activation_expiry" : the activation code is valid only for one day.   
 
 
@@ -83,8 +83,8 @@ c) "activation_expiry" : the activation code is valid only for one day.
 
 - I uesd **SMTP** protocol to send email to user.
 - I also used **sendmail server** from Google to send emails. here are steps to connfig your google account for sending mails :
-   1. Google account
-   2. Security
+   [^1]: Go to your Google account.
+   [^2]: Security.
    3. 2-step verification
    4. App passwords
    5. Give name for your application then copy the given password, which consists of 16 digit
