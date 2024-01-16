@@ -34,10 +34,10 @@
 ![03](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/89b336dd-5682-4505-b8fd-abeaf01368b8)
 
 ## Activity Diagrams
-### Sign Up 
+### a) Sign Up :       
 ![signnUpActivityDiagarm](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/2a17b9be-7cda-4918-ab8b-4fc35b899ec9)
 
-### Log In
+### b) Log In :       
 ![LogInActivityDiagarm](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/bf7f9e80-b520-4d91-9a3e-0157366abefa)
 
 ## Users Table
