@@ -82,14 +82,14 @@ c) "activation_expiry" : the activation code is valid only for one day.
 ## Sending The Activation Link 
 
 - I uesd **SMTP** protocol to send email to user.
-- I also used **sendmail server** from Google to send emails. here are steps to connfig your google account for sending mails :
-   1. Go to your Google account.
-   2.  Security.
-   3. 2-step verification
-   4. App passwords
-   5. Give name for your application then copy the given password, which consists of 16 digit
+<ol>I also used **sendmail server** from Google to send emails. here are steps to connfig your google account for sending mails :     
+   <li>Go to your Google account.</li>    
+   2.  Security.   
+   3. 2-step verification     
+   4. App passwords     
+   5. Give name for your application then copy the given password, which consists of 16 digit    
    6. Configure your website. go to **".env"** file and edit the following variables :  `MAIL_DRIVER=sendmail` `MAIL_HOST=smtp.gmail.com`    `MAIL_PORT=587`    `MAIL_USERNAME=..your gamil account..`     `MAIL_PASSWORD=..given password..`   `MAIL_ENCRYPTION=tls`
-
+</ol>
  - Sending email in Laravel is done using the **Mail** class     
     `Mail::to('$req->email')->send(new ActivationMail($activationLink) )`
  - What is "ActivationMail" ?
@@ -134,9 +134,11 @@ User enter email and password while they are fresh in his mind. then browser sav
 - I am using **Hash::check()** of Laravel to copmare the two hashed passwords, the first one stored in the database and the second one user enetering in the log in form.
 - If the log in is valid, I redirect the user to "home" page.
 
+1. fdsf
+2. fdsfs
+3. fasdfsd
 
-  <ol>
-  <li>Bird</li>
-  <li>McHale</li>
-  <li>Parish</li>
-  </ol>
+<ol>
+  <li>gfdg</li>
+  <li>ysdr</li>
+</ol>
