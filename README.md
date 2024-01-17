@@ -36,7 +36,7 @@
 - Background using **CSS**.
 - "Resend" button is available only one-time for press, so that user don't press the button many times for fun, making load to my server. I did this through "onclick" attribute of **JavaScript**.    
 
-![04](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/e058d2ff-583b-4097-83f6-6b340de31dd9)
+![image](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/22ea8bb7-81b5-4d27-bfaa-d9d67f117942)     
 ![03](https://github.com/AnasBarakat01/Best-Scenario-of-SignUp-LogIn/assets/155667484/89b336dd-5682-4505-b8fd-abeaf01368b8)
 
 ## Activity Diagrams
