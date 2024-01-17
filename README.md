@@ -60,7 +60,7 @@ I wanna discuss 3 columns in this table.
 
 ## Sign Up Contoller
 - I made a **controller** of Laravel to recieve requests from user and deal with it. to create the controller use the following  command : `php artisan make:controller SignUpController`   
-- a sign up page is displayed with a button navigating to the log in page if user already have account.
+- a sign up page is displayed with a button navigating to the login page if user already have account.
 - I used the **validate** function of Laravel to validate the input data.
   - I handle the "birth date" field, so that user don't enter a date after or equal today. this is done using **DateTime** class of         Laravel.
   - what about "password" field ?
@@ -121,16 +121,16 @@ I wanna discuss 3 columns in this table.
   - If I didn't found the email address in the database, I redirect user to the sign up page telling him "Create a new acoount as yours doesn\'t exist anymore".
   - If the activation code is expired, I delete his account from my database telling him "Your activation link is expired ! Sign up again".
   - If the activation code doesn't match mine in the database, I delete his account telling him "Your activation link is invalid ! Sign up again".
-  - Otherwise, the activation link is valid, as the activation code matches mine in the database and it's not expired. so I redirect him to the "Log In" page.
+  - Otherwise, the activation link is valid, as the activation code matches mine in the database and it's not expired. so I redirect him to the "Login" page.
 
-Why I do redirect user to the "Log In" page after he finished Signing Up ?   
+Why I do redirect user to the "Login" page after he finished Signing Up ?   
 User enter email and password while they are fresh in his mind. then browser save them for further login.   
 
 ## Log In
-- The function responsible for log in  is located in the "SignUpContoller" as name of "postLogInPage()".
+- The function responsible for login  is located in the "SignUpContoller" as name of "postLogInPage()".
 - User enter his email address and password. then I compare them with the values stored in the database.
-- If user account is not activated, I redirect him to the "Log In" page telling him
+- If user account is not activated, I redirect him to the "Login" page telling him
   "Your account in not activated ! Press the activation link sent to your mail" .
-- I am using **Hash::check()** of Laravel to copmare the two hashed passwords, the first one stored in the database and the second one user enetering in the log in form.
+- I am using **Hash::check()** of Laravel to copmare the two hashed passwords, the first one stored in the database and the second one user enetering in the login form.
 - If the log in is valid, I redirect the user to "home" page.
 
