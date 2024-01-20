@@ -1,7 +1,7 @@
 # Best-Scenario-of-SignUp-LogIn
 # Description :    
   In this tutorial I'm talking about the best way user can enter your webiste and create an account.      
-  How to validate the data user has entered in the sign up process ? How can you guarantee that email-address user has entered while creating a new account is his own and this email is real (Email Verification) ? As you will see email Verification can done by several methods. I'm using the method of "Activation Link" sent to user mail.    
+  How to validate the data user has entered in the sign up process ? How can you guarantee that email-address user has entered ,while creating a new account, is his own and this email is real (Email Verification) ? As you will see email Verification can done by several methods. I'm using the method of "Activation Link" sent to user mail.    
   I also use Activity Diagrams to provide you with a full imagination of the Sign up and Login scenario.
   What edits should be made to my database for the Email Verification process ?    
   Actually I'm a web developer not designer, so my design of web pages is not so good.I use PHP and Laravel framework.
